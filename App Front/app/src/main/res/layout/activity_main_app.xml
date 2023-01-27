@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f0ee"
+    tools:context=".AppActivity">
+
+    <TextView
+        android:id="@+id/welcomeNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/sofiasans"
+        android:text="Привет, NAME"
+        android:textColor="#6E6E6E"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/settings"
+        app:layout_constraintBottom_toBottomOf="@+id/welcomeNameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/welcomeNameTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weekWidget"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/weekbackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeNameTextView">
+
+        <TextView
+            android:id="@+id/thisWeekTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Эта неделя по эмоциям"
+            android:textColor="#6E6E6E"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mondayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/mondayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Пн"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/mondayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mondayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/mondayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mondayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/mondayImageView"
+                app:layout_constraintStart_toStartOf="@+id/mondayImageView"
+                app:layout_constraintTop_toTopOf="@+id/mondayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tuesdayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mondayLayout"
+            app:layout_constraintStart_toEndOf="@+id/mondayLayout"
+            app:layout_constraintTop_toTopOf="@+id/mondayLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/tuesdayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Вт"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/tuesdayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tuesdayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/tuesdayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="24"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tuesdayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/tuesdayImageView"
+                app:layout_constraintStart_toStartOf="@+id/tuesdayImageView"
+                app:layout_constraintTop_toTopOf="@+id/tuesdayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/wednesdayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tuesdayLayout"
+            app:layout_constraintStart_toEndOf="@+id/tuesdayLayout"
+            app:layout_constraintTop_toTopOf="@+id/tuesdayLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/wednesdayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Ср"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/wednesdayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/wednesdayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/wednesdayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="25"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/wednesdayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/wednesdayImageView"
+                app:layout_constraintStart_toStartOf="@+id/wednesdayImageView"
+                app:layout_constraintTop_toTopOf="@+id/wednesdayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/thursdayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/wednesdayLayout"
+            app:layout_constraintStart_toEndOf="@+id/wednesdayLayout"
+            app:layout_constraintTop_toTopOf="@+id/wednesdayLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/thursdayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Чт"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/thursdayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/thursdayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/thursdayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="26"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/thursdayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/thursdayImageView"
+                app:layout_constraintStart_toStartOf="@+id/thursdayImageView"
+                app:layout_constraintTop_toTopOf="@+id/thursdayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fridayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/thursdayLayout"
+            app:layout_constraintStart_toEndOf="@+id/thursdayLayout"
+            app:layout_constraintTop_toTopOf="@+id/thursdayLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/fridayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Пт"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/fridayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/fridayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/fridayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="27"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/fridayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/fridayImageView"
+                app:layout_constraintStart_toStartOf="@+id/fridayImageView"
+                app:layout_constraintTop_toTopOf="@+id/fridayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/saturdayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fridayLayout"
+            app:layout_constraintStart_toEndOf="@+id/fridayLayout"
+            app:layout_constraintTop_toTopOf="@+id/fridayLayout"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/saturdayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Сб"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/saturdayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/saturdayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/saturdayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="28"
+                android:textColor="#D3D3D3"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/saturdayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/saturdayImageView"
+                app:layout_constraintStart_toStartOf="@+id/saturdayImageView"
+                app:layout_constraintTop_toTopOf="@+id/saturdayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sundayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            app:layout_constraintBottom_toBottomOf="@+id/saturdayLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/saturdayLayout"
+            app:layout_constraintTop_toTopOf="@+id/saturdayLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/sundayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Вс"
+                android:textColor="#6E6E6E"
+                app:layout_constraintBottom_toTopOf="@+id/sundayImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/sundayImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dayweek" />
+
+            <TextView
+                android:id="@+id/sundayDayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofiasans"
+                android:text="29"
+                android:textColor="#D3D3D3"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sundayImageView"
+                app:layout_constraintEnd_toEndOf="@+id/sundayImageView"
+                app:layout_constraintStart_toStartOf="@+id/sundayImageView"
+                app:layout_constraintTop_toTopOf="@+id/sundayImageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weekWidget"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerPadding="10dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bannerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/banner">
+
+                <TextView
+                    android:id="@+id/learnMoreTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="188dp"
+                    android:layout_marginBottom="27dp"
+                    android:background="@drawable/learnmore"
+                    android:fontFamily="@font/sofiasans"
+                    android:padding="10dp"
+                    android:text="Узнать"
+                    android:textAlignment="center"
+                    android:textColor="#6E6E6E"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="44dp"
+                    android:fontFamily="@font/sofiasans"
+                    android:text="Узнай про технику трекинга эмоций"
+                    android:textColor="#6E6E6E"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="38dp"
+                    android:fontFamily="@font/sofiasans"
+                    android:text="Прочитай инструкцию и пойми, как эффективнее всего использовать приложение"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/freeNoteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/weekbackground">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/sofiasans"
+                    android:text="Заметки в свободной форме"
+                    android:textColor="#6E6E6E"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/noteEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:ems="10"
+                    android:fontFamily="@font/sofiasans"
+                    android:hint="Сегодня у меня произошло..."
+                    android:inputType="textPersonName"
+                    android:textColor="#6E6E6E"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/saveNoteTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/saveNoteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/primary_a_d"
+                    android:padding="10dp"
+                    android:text="Сохранить заметку"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emotionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangle_13__2_">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/sofiasans"
+                    android:text="Активности дня"
+                    android:textColor="#6E6E6E"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginBottom="7dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addNewEmotionTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/noteitem" />
+
+                <TextView
+                    android:id="@+id/addNewEmotionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/primary_a_d"
+                    android:padding="10dp"
+                    android:text="Добавить новую эмоцию"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

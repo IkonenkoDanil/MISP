@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityChooseEmotion">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chooseEmotionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F0EE"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="197dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Что ты чувствуешь?"
+            android:textAlignment="center"
+            android:textColor="#6E6E6E"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/happyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="49dp"
+            android:background="@drawable/happyface"
+            android:backgroundTint="@color/black"
+            android:outlineProvider="none"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:srcCompat="@drawable/happyface" />
+
+        <ImageView
+            android:id="@+id/sadImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sadface"
+            android:backgroundTint="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/fearImageView"
+            app:layout_constraintStart_toEndOf="@+id/happyImageView"
+            app:layout_constraintTop_toTopOf="@+id/happyImageView"
+            app:srcCompat="@drawable/sadface" />
+
+        <ImageView
+            android:id="@+id/fearImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/fearface"
+            android:backgroundTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sadImageView"
+            app:srcCompat="@drawable/fearface" />
+
+        <TextView
+            android:id="@+id/happyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Радость"
+            android:textColor="#6E6E6E"
+            app:layout_constraintEnd_toEndOf="@+id/happyImageView"
+            app:layout_constraintStart_toStartOf="@+id/happyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/happyImageView" />
+
+        <TextView
+            android:id="@+id/sadTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Грусть"
+            android:textColor="#6E6E6E"
+            app:layout_constraintEnd_toEndOf="@+id/sadImageView"
+            app:layout_constraintStart_toStartOf="@+id/sadImageView"
+            app:layout_constraintTop_toBottomOf="@+id/sadImageView" />
+
+        <TextView
+            android:id="@+id/fearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Страх"
+            android:textColor="#6E6E6E"
+            app:layout_constraintEnd_toEndOf="@+id/fearImageView"
+            app:layout_constraintStart_toStartOf="@+id/fearImageView"
+            app:layout_constraintTop_toBottomOf="@+id/fearImageView" />
+
+        <ImageView
+            android:id="@+id/disappointmentImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/disappointmentface"
+            android:backgroundTint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/sadImageView"
+            app:layout_constraintStart_toStartOf="@+id/happyImageView"
+            app:layout_constraintTop_toBottomOf="@+id/happyImageView"
+            app:srcCompat="@drawable/disappointmentface" />
+
+        <TextView
+            android:id="@+id/disappointmentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Разочарование"
+            android:textColor="#6E6E6E"
+            app:layout_constraintEnd_toEndOf="@+id/disappointmentImageView"
+            app:layout_constraintStart_toStartOf="@+id/disappointmentImageView"
+            app:layout_constraintTop_toBottomOf="@+id/disappointmentImageView" />
+
+        <ImageView
+            android:id="@+id/angryImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/angryface"
+            android:backgroundTint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/fearImageView"
+            app:layout_constraintStart_toStartOf="@+id/sadImageView"
+            app:layout_constraintTop_toTopOf="@+id/disappointmentImageView"
+            app:srcCompat="@drawable/angryface" />
+
+        <TextView
+            android:id="@+id/angryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofiasans"
+            android:text="Злость"
+            android:textColor="#6E6E6E"
+            app:layout_constraintEnd_toEndOf="@+id/angryImageView"
+            app:layout_constraintStart_toStartOf="@+id/angryImageView"
+            app:layout_constraintTop_toBottomOf="@+id/angryImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F6F0EE"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofiasans"
+            android:text=" Добро пожаловать в приложение"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

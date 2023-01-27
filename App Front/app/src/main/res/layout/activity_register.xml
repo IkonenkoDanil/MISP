@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F0EE"
+    tools:context=".auth.RegisterActivity">
+
+    <TextView
+        android:id="@+id/loginButtonTextView2"
+        android:layout_width="333dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="36dp"
+        android:paddingVertical="10dp"
+        android:text="Войти"
+        android:textAlignment="center"
+        android:textColor="#E8A28B"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incorrectTextView"
+        app:layout_constraintVertical_bias="0.874" />
+
+    <TextView
+        android:id="@+id/registerButtonTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/primary_a_d"
+        android:paddingVertical="10dp"
+        android:text="Зарегистрироваться"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginButtonTextView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRepeatPasswordRegister"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextRepeatPasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="Повторите пароль..."
+        android:inputType="textPassword"
+        android:paddingHorizontal="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordRegister" />
+
+    <TextView
+        android:id="@+id/repeatPasswordViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Повторите пароль"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextRepeatPasswordRegister"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordRegister" />
+
+    <EditText
+        android:id="@+id/editTextPasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="Введите пароль..."
+        android:inputType="textPassword"
+        android:paddingHorizontal="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/nameRegisterEditText"
+        app:layout_constraintTop_toBottomOf="@+id/nameRegisterEditText" />
+
+    <TextView
+        android:id="@+id/passwordViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Пароль"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordRegister"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordRegister" />
+
+    <EditText
+        android:id="@+id/nameRegisterEditText"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="Введите имя..."
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerTextView"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegisterEditText" />
+
+    <TextView
+        android:id="@+id/nameRegisterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Имя"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/nameRegisterEditText"
+        app:layout_constraintStart_toStartOf="@+id/nameRegisterEditText" />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/sofiasans"
+        android:text="Регистрация"
+        android:textColor="#6E6E6E"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailRegisterEditText"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:hint="Введите почту..."
+        android:inputType="textPersonName"
+        android:paddingHorizontal="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/registerTextView"
+        app:layout_constraintTop_toBottomOf="@+id/registerTextView" />
+
+    <TextView
+        android:id="@+id/emailRegisterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Почта"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/emailRegisterEditText"
+        app:layout_constraintStart_toStartOf="@+id/emailRegisterEditText" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Неправильные данные для регистрации"
+        android:textColor="#EB9191"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/editTextRepeatPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRepeatPasswordRegister" />
+</androidx.constraintlayout.widget.ConstraintLayout>
